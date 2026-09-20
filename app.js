@@ -78,3 +78,12 @@ const info={
 document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{const key=b.dataset.open;$('#info-content').innerHTML=info[key]();$('#info-dialog').showModal();$('#info-dialog').scrollTop=0;if(key==='about')$('#reset-demo').onclick=()=>{demoBookings=[];try{sessionStorage.removeItem('tide-palm-inventory');}catch{}renderRooms();$('#reset-status').textContent='Demo bookings cleared. Original sample availability restored.';};});
 $('.info-close').onclick=()=>$('#info-dialog').close();
 renderRooms();
+
+// Full-frame hero slideshow for the Haputale villa mood.
+const heroPhoto=document.querySelector('.hero-photo');
+if(heroPhoto){
+ const heroSlides=['/assets/hero-1.webp','/assets/hero-2.webp','/assets/hero-3.webp'];
+ heroSlides.forEach(src=>{const img=new Image();img.src=src;});
+ let heroIndex=0;
+ window.setInterval(()=>{heroIndex=(heroIndex+1)%heroSlides.length;heroPhoto.classList.add('hero-photo-changing');window.setTimeout(()=>{heroPhoto.src=heroSlides[heroIndex];heroPhoto.classList.remove('hero-photo-changing');},220);},6500);
+}
