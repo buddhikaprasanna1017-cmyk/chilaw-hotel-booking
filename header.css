@@ -1,0 +1,14 @@
+/* Transparent brand mark and Aarna's green navigation band. */
+.nav{max-width:none;background:#001C17;color:#FFFFFF;min-height:112px;border-bottom:1px solid #967756;padding-left:max(24px,5.4%);padding-right:max(24px,5.4%)}
+.nav nav a{display:inline-flex;align-items:center;min-height:44px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav nav a:hover,.nav nav a:focus-visible{color:#D9CAA8;border-bottom-color:#D9CAA8}
+.nav>.button{background:#D9CAA8;color:#001C17;border-color:#D9CAA8;font-weight:600;min-height:48px}
+.nav>.button:hover{background:#FFFFFF;color:#001C17;border-color:#FFFFFF}
+.nav .brand-lockup>span:not(.original-logo){color:#D9CAA8;letter-spacing:2px}
+.brand-lockup .original-logo{width:180px;height:62px;background:transparent;border-radius:0;margin:0;overflow:hidden}
+.original-logo img{width:245px;height:auto;max-width:none;left:-32px;top:-14px;filter:brightness(0) saturate(100%) invert(57%) sepia(17%) saturate(850%) hue-rotate(350deg) brightness(96%) contrast(88%)}
+.nav .original-logo img{filter:brightness(0) saturate(100%) invert(83%) sepia(14%) saturate(648%) hue-rotate(1deg) brightness(97%) contrast(86%)}
+.demo-bar{background:#102C19;color:#FFFFFF}
+.nav a:focus-visible{outline-color:#D9CAA8}
+@media(max-width:1000px){.nav{gap:10px 16px}.nav nav{border-top:1px solid #967756;padding-top:8px}}
+@media(max-width:700px){.nav{padding:14px 16px 10px}.brand-lockup .original-logo{width:145px;height:50px}.original-logo img{width:198px;left:-26px;top:-11px;height:auto}.nav>.button{font-size:13px;padding:10px 13px;gap:8px}.nav nav{font-size:14px;column-gap:20px;row-gap:0}.nav nav a{min-height:44px}.nav .brand-lockup>span:not(.original-logo){font-size:9px}}
